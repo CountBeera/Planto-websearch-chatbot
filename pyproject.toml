@@ -1,0 +1,15 @@
+[project]
+name = "web-search"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "duckduckgo-search>=8.1.1",
+    "google-generativeai>=0.8.5",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.27",
+    "langchain-google-genai>=2.0.10",
+    "python-dotenv>=1.1.1",
+    "streamlit>=1.48.1",
+]
