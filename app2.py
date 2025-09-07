@@ -43,8 +43,10 @@ agent = initialize_agent(
 # Consistency Check Function
 # -------------------------
 def consistency_check(question: str, answer: str) -> str:
+    
     """Ask LLM to check if the answer is consistent, sufficient, and not contradictory.
        If not, regenerate/refine the answer."""
+    
     check_prompt = f"""
     You are tasked with evaluating the following answer for consistency and sufficiency.
 
@@ -102,13 +104,4 @@ if user_input:
         st.write(final_response)
         st.session_state.history.append({"role": "assistant", "content": final_response})
 
-    # with st.chat_message("assistant"):
-    #     with st.spinner("Thinking..."):
-    #         # Step 1: Generate answer
-    #         raw_response = agent.run(user_input)
 
-    #         # Step 2: Consistency check
-    #         final_response = consistency_check(user_input, raw_response)
-
-    #     st.write(final_response)
-    #     st.session_state.history.append({"role": "assistant", "content": final_response})
